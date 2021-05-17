@@ -1,0 +1,205 @@
+For changing the color using jquery: https://stackoverflow.com/questions/5999209/how-to-get-the-background-color-code-of-an-element
+
+Seeding a single table:
+php artisan db:seed --class=UsersTableSeeder
+black color: #040404
+			:#292b33
+			:#1c1e33
+
+Ash color:#FFFFFF
+		:#e3e3e3
+		:#f5f5f5
+		:#F2F2F2
+		:
+remson color:#008b9e
+			:#008a9f
+			:#097586
+
+any color you want: rgba(100, 148, 100, 40)
+
+            @include('modals.editUserModal')
+
+            1123Qw!123
+
+@if(count($errors) > 0)
+
+
+          $('#addProductModal').modal('show');
+
+
+    @endif
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#usrs").on('click', function(){
+
+        $(this).css({
+          "color":"red"
+
+    });
+        $(this).css({
+          "color":"red"
+
+    });
+   });
+   });
+
+
+{{ route('passwords.edit', Auth::user()->id) }}
+
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=developer.adamu@gmail.com
+MAIL_PASSWORD=waqhmmufchpuzgxv
+MAIL_ENCRYPTION=tls
+
+
+else if (Number($('#nofproducts').val()) > 1) {
+
+        console.log('here was two');
+
+        if ((Number($('#nofproducts').val()) == Number($('#nofcolors').val())) && (Number($('#nofproducts').val()) == Number($('#nofrailings').val()))) {
+             var getno = Number($('#nofproducts').val());
+             var no = 2;
+             while(no <= getno){
+                 if(checkIfAllFill(no)){
+                    // console.log('here was two');
+                    return false;
+                 }
+                no++;
+             }
+
+        }
+        // return true;
+
+    }
+    // else if ((Number($('#nofproducts').val()) != Number($('#nofcolors').val())) || Number($('#nofproducts').val()) != Number($('#nofrailings').val())) {
+
+    //     console.log('alert here');
+    //     $('#notequal').html('<div class="alert alert-warning">Sorry please remove any products, product color and railing that do not match</div>');
+
+    // }
+
+
+
+
+     // save image into the db
+
+            var url = $(this).attr('action');
+
+            // console.log($(this).serialize());
+            // var form_data = new FormData(this);
+
+            $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+            }
+            });
+
+            $.ajax({
+                url: url,
+                type: "PUT",
+                // enctype: "multipart/form-data",
+                // data: $(this).serialize(),
+                data:new FormData($('#cust_Type')[0].files[0]),
+                dataType:'JSON',
+                // processData: false,
+                // contentType: false,
+                // cache: false,
+                // beforeSend: function() {
+                //     $('#save').html('Saving ......');
+                // },
+                success: function(response){
+                    console.log(response);
+                    document.getElementById('cust_Type').reset();
+                    $('#save').show();
+                    $('#save').html('Saving ......');
+
+                    setTimeout(function(){
+                    $('#save').hide();
+                    },10000);
+
+                },
+                error: function(xhr, ajaxDelete, thrownError) {
+               console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+
+               });
+
+               6/4/2020 19:40:55
+               @foreach($quot->order_product_details as $prod)
+
+      <tr>
+        <td class="bkg">{{ $prod->railingNo }}</td>
+        <td class="bkg">
+          <?php  // Spliting based on some values.
+        if (strpos($prod->productName, 'Continue') !== false) {
+            $cont = explode('Continue',$prod->productName); echo $cont[0];
+        }else{ $brk = explode('Bracket',$prod->productName); echo $brk[0];}
+        ?>
+        </td>
+        <td class="bkg">
+        <?php  // Spliting based on some values.
+        if (strpos($prod->productName, 'Continue') !== false) {
+            $cont = explode('Continue',$prod->productName); echo $cont[0];
+        }else{ $brk = explode('Bracket',$prod->productName); echo $brk[0];}
+        ?>
+        @if($prod->productCover)
+          <?php echo 'with '.$prod->productCover; ?>
+        @endif
+
+        <br/>along with {{ $prod->handRail }}</td>
+        <td colspan="2" class="bkg"></td>
+      </tr>
+      @endforeach
+
+
+      <!-- <li class="">
+            <label class="radio-inline">
+              <input type="checkbox" name="payterms[]" value="50% Advance On Order Confirmation">&emsp;50% Advance On Order Confirmation
+            </label>
+          </li>
+          <li class="">
+            <label class="radio-inline">
+              <input type="checkbox" name="payterms[]" value="50% On Material Dispatch">&emsp;50% On Material Dispatch
+            </label>
+          </li>
+          <li class="">
+            <label class="radio-inline">
+              <input type="checkbox" name="payterms[]" value="25% Advance On Order Confirmation">&emsp;25% Advance On Order Confirmation
+            </label>
+          </li>
+          <li class="">
+            <label class="radio-inline">
+              <input type="checkbox" name="payterms[]" value="25% On Material Dispatch">&emsp;25% On Material Dispatch
+            </label>
+          </li>
+          <li class="">
+            <label class="radio-inline">
+              <input type="checkbox" name="payterms[]" value="40% On Glass Being Order">&emsp;40% On Glass Being Order
+            </label>
+          </li> -->
+
+
+
+        // $pdf = PDF::loadView('quotations.quot_gen.downloadpdf', $info);
+
+        // return $pdf->stream('downloadpdf.pdf');
+
+        // return view('quotations.quot_gen.invoice')->with(['quot'=>$quotorder, 'final_quot'=>$final_quot, 'rftvalues'=>$rftvalues, 'product_images'=>$product_images, 'hand_rail_images'=>$hand_rail_images, 'paymentTerms'=>$paymentTerms]);
+
+        // $mpdf->setFooter('This is footer');
+        // $mpdf->pdf_version = '1.5';
+        // $mpdf->WriteHTML($stylesheet, 1);
+
+        // [
+        //     'mode' => 'utf-8',
+        //     'format' => [190, 236],
+        //     'orientation' => 'L',
+
+        //     'margin_header' => 0,
+        //     'margin_footer' => 0
+        // ]
+

@@ -1,0 +1,7 @@
+Cmd for some installed packages:
+
+Color picker: composer require itsjavi/bootstrap-colorpicker
+URL: https://itsjavi.com/bootstrap-colorpicker/
+MPDF: composer require mpdf/mpdf
+laravel echo: npm install --save laravel-echo pusher-js
+pusher: composer require pusher/pusher-php-server
